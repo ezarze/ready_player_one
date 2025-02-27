@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready Player One - Film</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            width: 100%;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            background: linear-gradient(135deg, #1e2a47, #3c4a79);
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            max-width: 1200px;
+            height: 80%;
+        }
+        .hero {
+            background: url('https://m.media-amazon.com/images/I/91J6qkqfU+L._SY679_.jpg') no-repeat center center;
+            background-size: cover;
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .title-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .title-container h1 {
+            font-size: 3em;
+            color: #00eaff;
+            font-weight: bold;
+        }
+        .title-container img {
+            width: 100px;
+            height: 150px;
+            border-radius: 10px;
+        }
+        iframe {
+            width: 100%;
+            height: 250px;
+            border: 5px solid #00eaff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .tab {
+            padding: 15px;
+            cursor: pointer;
+            text-align: center;
+            flex-grow: 1;
+            font-size: 1.2em;
+            color: #ccc;
+            transition: background-color 0.3s;
+        }
+        .tab:hover {
+            background-color: #444;
+        }
+        .tab.active {
+            background-color: #00eaff;
+            color: #000;
+        }
+        .content {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+            margin-top: 20px;
+            display: none;
+        }
+        .content h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #00eaff;
+        }
+        .content p {
+            font-size: 1.1em;
+            line-height: 1.5;
+            color: #ccc;
+        }
+        .character {
+            display: flex;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+        .character img {
+            width: 150px;
+            height: 200px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        footer {
+            background-color: #222;
+            color: #aaa;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="hero"></div>
+        
+        <!-- Title and Cover Image Section -->
+        <div class="title-container">
+            <h1>Ready Player One</h1>
+            <img src="https://m.media-amazon.com/images/I/91J6qkqfU+L._SY679_.jpg" alt="Cover Image">
+        </div>
+
+        <!-- Bande-Annonce -->
+        <iframe src="https://www.youtube.com/embed/cSp1dM2Vj48" allowfullscreen></iframe>
+        
+        <!-- Onglets -->
+        <div class="tabs">
+            <div class="tab active" onclick="showTab('synopsis')">Synopsis</div>
+            <div class="tab" onclick="showTab('personnages')">Personnages</div>
+            <div class="tab" onclick="showTab('acteurs')">Acteurs</div>
+        </div>
+
+        <!-- Contenu des onglets -->
+        <div id="synopsis" class="content" style="display: block;">
+            <h2>Synopsis</h2>
+            <p>
+                Dans un futur où l'OASIS, un univers virtuel, est devenu essentiel pour échapper à la réalité, Wade Watts se lance dans une chasse au trésor. Le gagnant héritera de la fortune et du contrôle du jeu. Mais Wade devra faire face à de puissants rivaux, notamment l'entreprise IOI, prête à tout pour prendre le contrôle.
+            </p>
+        </div>
+
+        <div id="personnages" class="content">
+            <h2>Personnages Principaux</h2>
+            
+            <!-- Personnage 1 : Wade Watts -->
+            <div class="character">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Tye_Sheridan_2018.jpg" alt="Wade Watts">
+                <div>
+                    <h3>Wade Watts / Parzival</h3>
+                    <p>Wade Watts est le protagoniste principal. C'est un jeune homme déterminé à trouver l'Easter Egg dans l'OASIS et à s'en sortir dans un monde dystopique.</p>
+                </div>
+            </div>
+
+            <!-- Personnage 2 : Art3mis -->
+            <div class="character">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Olivia_Cooke_2015.jpg" alt="Art3mis">
+                <div>
+                    <h3>Art3mis</h3>
+                    <p>Art3mis est une hackeuse talentueuse et une alliée de Wade dans la quête de l'Easter Egg. Elle est courageuse et intelligente.</p>
+                </div>
+            </div>
+
+            <!-- Personnage 3 : Nolan Sorrento -->
+            <div class="character">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Ben_Mendelsohn_2013.jpg" alt="Nolan Sorrento">
+                <div>
+                    <h3>Nolan Sorrento</h3>
+                    <p>Nolan Sorrento est l'antagoniste principal du film. Il dirige l'entreprise IOI et est prêt à tout pour gagner le contrôle de l'OASIS.</p>
+                </div>
+            </div>
+
+            <!-- Personnage 4 : Ogden Morrow -->
+            <div class="character">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Simon_Pegg_2017.jpg" alt="Ogden Morrow">
+                <div>
+                    <h3>Ogden Morrow</h3>
+                    <p>Ogden Morrow est un ancien collègue et ami de James Halliday, le créateur de l'OASIS. Il aide Wade dans sa quête.</p>
+                </div>
+            </div>
+
+            <!-- Personnage 5 : James Halliday -->
+            <div class="character">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Mark_Rylance_2018.jpg" alt="James Halliday">
+                <div>
+                    <h3>James Halliday</h3>
+                    <p>James Halliday est le créateur de l'OASIS. Après sa mort, sa quête pour l'Easter Egg devient le centre de l'intrigue du film.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="acteurs" class="content">
+            <h2>Acteurs Principaux</h2>
+            <p>
+                - Tye Sheridan (Wade Watts / Parzival)<br>
+                - Olivia Cooke (Art3mis)<br>
+                - Ben Mendelsohn (Nolan Sorrento)<br>
+                - Simon Pegg (Ogden Morrow)<br>
+                - Mark Rylance (James Halliday)
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 - Page dédiée à "Ready Player One"
+    </footer>
+
+    <script>
+        function showTab(tabId) {
+            // Masquer toutes les sections
+            var tabs = document.querySelectorAll('.content');
+            tabs.forEach(function(tab) {
+                tab.style.display = 'none';
+            });
+            
+            // Réactiver l'onglet sélectionné
+            var activeTab = document.querySelectorAll('.tab');
+            activeTab.forEach(function(tab) {
+                tab.classList.remove('active');
+            });
+            
+            // Afficher la section sélectionnée
+            document.querySelector('#' + tabId).style.display = 'block';
+            // Ajouter la classe "active" à l'onglet sélectionné
+            event.target.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
